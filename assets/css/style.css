@@ -1,0 +1,15 @@
+#event-form {
+    text-align: center;
+}
+
+.event-card.mdl-card {
+    width: 320px;
+    height: 320px;
+    margin: 15px;
+    float: left;
+}
+
+.event-card > .mdl-card__title {
+    color: #fff;
+    background: #46B6AC;
+}
