@@ -93,6 +93,13 @@
     </div>
 
     <script src="/node_modules/material-design-lite/material.min.js"></script>
+    <!-- System JS with babel plugin -->
+    <script src="/node_modules/systemjs/dist/system.min.js"></script>
+    <script src="/node_modules/systemjs/dist/extras/transform.min.js"></script>
+    <script src="/node_modules/systemjs-transform-babel/dist/babel-transform.js"></script>
+    <script>
+        System.import('/app.js');
+    </script>
 </body>
 
 </html>
