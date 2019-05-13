@@ -3,4 +3,5 @@ export class Event {
         this.name = name;
         this.category = category;
     }
+
 }
