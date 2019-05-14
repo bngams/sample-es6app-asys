@@ -1,0 +1,24 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "name": "Floralies",
+            "category": "3eme Age"
+        },
+        {
+            "id": 2,
+            "name": "La mer",
+            "category": "WTF"
+        }
+    ],
+    "providers": [
+        {
+            "id": 1,
+            "name": "Asys"
+        },
+        {
+            "id": 2,
+            "name": "Aelion"
+        }
+    ]
+}

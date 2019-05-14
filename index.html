@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
+    <!-- Styles -->
     <link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
     <link rel="stylesheet" href="/node_modules/material-design-icons/iconfont/material-icons.css">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -18,7 +18,7 @@
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span class="mdl-layout-title">My Sample ES6APP</span>
+                <span class="mdl-layout-title">Title</span>
                 <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation. We hide it in small screens. -->
@@ -31,7 +31,7 @@
             </div>
         </header>
         <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">My Sample ES6APP</span>
+            <span class="mdl-layout-title">Title</span>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="">Link</a>
                 <a class="mdl-navigation__link" href="">Link</a>
@@ -41,40 +41,18 @@
         </div>
         <main class="mdl-layout__content">
             <div class="page-content">
-
                 <event-form></event-form>
-
-                <!-- Events list -->
-                <div id="event-list">
-                    <div class="event-card mdl-card mdl-shadow--2dp">
-                        <div class="mdl-card__title mdl-card--expand">
-                            <h2 class="mdl-card__title-text">Floralis</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Aenan convallis.
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border">
-                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                                View
-                            </a>
-                        </div>
-                    </div>
-
-
-                </div>
+                <event-list></event-list>
             </div>
         </main>
     </div>
-
+    <!-- Scripts -->
     <script src="/node_modules/material-design-lite/material.min.js"></script>
-    <!-- System JS with babel plugin -->
+    <!-- System JS: JS Module loader + Babel transpilation -->
     <script src="/node_modules/systemjs/dist/system.min.js"></script>
     <script src="/node_modules/systemjs/dist/extras/transform.min.js"></script>
     <script src="/node_modules/systemjs-transform-babel/dist/babel-transform.js"></script>
-    <script>
-        System.import('/app.js');
-    </script>
+    <script>System.import('/app.js');</script>
 </body>
 
 </html>

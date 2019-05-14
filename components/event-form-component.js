@@ -48,7 +48,10 @@ export class EventFormComponent extends AppComponent {
                 this.inputName.value,
                 this.inputCategory.value
             );
-            console.log(event);
+
+            // custom event and dispatch
+            let domEvent = new CustomEvent('event-create', { detail: event });
+            document.dispatchEvent(domEvent);
         })
     }
 }

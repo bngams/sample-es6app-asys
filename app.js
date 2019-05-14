@@ -13,8 +13,8 @@ class App {
         console.log("App initialization");
         // creer / déclarer nos composant
         customElements.define('event-form', EventFormComponent);
-        customElements.define('event-list', EventListComponent);
         customElements.define('event-card', EventCardComponent);
+        customElements.define('event-list', EventListComponent);
     }
 }
 

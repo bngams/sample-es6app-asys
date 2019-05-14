@@ -1,3 +1,2 @@
-# Run
+> npm install -g json-server
 > npm install
-> npm run serve 
