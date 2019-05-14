@@ -1,6 +1,7 @@
 import { AppComponent } from "./app-component.js";
 import { EventCardComponent } from "./event-card-component.js";
 import { Event } from "../models/event-class.js";
+import { EventService } from "../services/event-service.js";
 
 const TEMPLATE = `
 <div id="event-list"></div>
@@ -26,17 +27,26 @@ export class EventListComponent extends AppComponent {
     handleEventFormCreate() {
         document.addEventListener('event-create', (e) => {
             console.log('event to add ', e.detail);
-            // add an event card
-            // create a card
-            // let card = new EventCardComponent();
-            // // add card to our List
-            // this.container.appendChild(card);
             this.container.appendChild(new EventCardComponent(e.detail));
         });
     }
 
     onReady() {
         console.log('Event List Component is ready');
-        this.container.appendChild(new EventCardComponent(new Event("Test", "Test")));
+        // manually add card
+        // this.container.appendChild(new EventCardComponent(new Event("Test", "Test")));
+
+        // add from ws
+        this.loadEvents();
+    }
+
+    loadEvents() {
+        EventService.fetchEvents().then((data) => {
+            console.log("events fetch", JSON.parse(data));
+
+            for (event of JSON.parse(data)) {
+                this.container.appendChild(new EventCardComponent(event));
+            }
+        });
     }
 }

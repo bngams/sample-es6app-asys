@@ -44,6 +44,7 @@ export class EventFormComponent extends AppComponent {
     */
     submit() {
         this.submitBtn.addEventListener('click', () => {
+            // event object
             let event = new Event(
                 this.inputName.value,
                 this.inputCategory.value

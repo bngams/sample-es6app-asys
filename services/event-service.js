@@ -1,7 +1,7 @@
 import { HttpClient } from "../utils/http.js";
 
 export class EventService {
-    fetchProducts() {
+    static fetchEvents() {
         return HttpClient.get('http://localhost:3004/events');
     }
 }
